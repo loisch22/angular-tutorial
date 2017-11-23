@@ -10,13 +10,47 @@
   <body>
     <div ng-controller="myController">
       <div>
-        <input type="text" ng-model="greeting"/>
-        <br>
-        <br>
-        {{ message }}
-        <br>
-        <br>
-        {{ greeting }}
+        <table>
+          <tr>
+            <td>First Name</td>
+            <td>
+              <input type="text" ng-model="employee.firstName"/>
+            </td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>
+              <input type="text" ng-model="employee.lastName"/>
+            </td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="text" ng-model="employee.gender"/>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <table>
+          <tr>
+            <td>First Name</td>
+            <td>
+              {{ employee.firstName }}
+            </td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>
+              {{ employee.lastName }}
+            </td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              {{ employee.gender }}
+            </td>
+          </tr>
+        </table>
       </div>
     <app-root></app-root>
   </body>
