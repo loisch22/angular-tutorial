@@ -12,6 +12,7 @@ var app = angular
         $scope.employees = employees;
         //ng-model="hideSalary" NOT defined so it will return false
         //when checked ng-hide="true" since "hideSalary" == true
+        //ng-hide="!hideSalary" == true aka not false so hides
         //uncheck "hideSalary" == false so ng-hide="false" == ng-hide="hideSalary"
 
         //ng-show="showSalary" == false when unchecked because undefined
