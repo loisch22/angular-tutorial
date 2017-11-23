@@ -10,13 +10,13 @@
   <body>
     <div ng-controller="myController">
       <div>
-        First name : {{ employee.firstName }}
+        Name : {{ country.name }}
       </div>
       <div>
-        Last name : {{ employee.lastName }}
+        Capital : {{ country.capital }}
       </div>
       <div>
-        Gender : {{ employee.gender }}
+        <img src="{{country.flag}}" style="height: 100px; max-width: 100%" alt="{{ country.name + ' Flag'}}"/>
       </div>
     </div>
     <app-root></app-root>

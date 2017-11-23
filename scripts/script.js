@@ -1,3 +1,28 @@
+//displaying images dynamically
+var myApp = angular
+      .module("myModule", [])
+      .controller("myController", function($scope) {
+        var country = {
+          name : "USA",
+          capital : "Washington, D.C.",
+          flag : "./images/usFlag.png"
+        };
+        $scope.country = country;
+      });
+
+//method chaining - displaying properties
+// var myApp = angular
+//       .module("myModule", [])
+//       .controller("myController", function($scope) {
+//         var employee = {
+//           firstName: "David",
+//           lastName: "Hastings",
+//           gender: "Male"
+//         };
+//
+//         $scope.employee = employee;
+//       });
+
 //create a module (container) called myModule that has no dependencies
 // var myApp = angular.module("myModule", []);
 //
@@ -23,16 +48,3 @@
 //
 //   // $scope.message = "AngularJS Tutorial";
 // });
-
-//method chaining
-var myApp = angular
-      .module("myModule", [])
-      .controller("myController", function($scope) {
-        var employee = {
-          firstName: "David",
-          lastName: "Hastings",
-          gender: "Male"
-        };
-        
-        $scope.employee = employee;
-      });
