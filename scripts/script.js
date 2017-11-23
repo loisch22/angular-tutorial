@@ -1,3 +1,50 @@
+//displaying images dynamically
+var myApp = angular
+      .module("myModule", [])
+      .controller("myController", function($scope) {
+        var countries = [
+          {
+            name: "UK",
+            cities: [
+              { name: "London" },
+              { name: "Manchester" },
+              { name: "Birmingham"}
+            ]
+          },
+          {
+            name: "USA",
+            cities: [
+              { name: "Seattle" },
+              { name: "New York" },
+              { name: "Los Angeles" }
+            ]
+          },
+          {
+            name: "South Korea",
+            cities: [
+              { name: "Seoul" },
+              { name: "Busan" },
+              { name: "Gangnam" }
+            ]
+          },
+        ];
+        //scope object
+        $scope.countries = countries;
+      });
+
+//method chaining - displaying properties
+// var myApp = angular
+//       .module("myModule", [])
+//       .controller("myController", function($scope) {
+//         var employee = {
+//           firstName: "David",
+//           lastName: "Hastings",
+//           gender: "Male"
+//         };
+//
+//         $scope.employee = employee;
+//       });
+
 //create a module (container) called myModule that has no dependencies
 // var myApp = angular.module("myModule", []);
 //
@@ -23,16 +70,3 @@
 //
 //   // $scope.message = "AngularJS Tutorial";
 // });
-
-//method chaining
-var myApp = angular
-      .module("myModule", [])
-      .controller("myController", function($scope) {
-        var employee = {
-          firstName: "David",
-          lastName: "Hastings",
-          gender: "Male"
-        };
-        
-        $scope.employee = employee;
-      });

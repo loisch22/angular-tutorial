@@ -9,16 +9,16 @@
   </head>
   <body>
     <div ng-controller="myController">
-      <div>
-        First name : {{ employee.firstName }}
-      </div>
-      <div>
-        Last name : {{ employee.lastName }}
-      </div>
-      <div>
-        Gender : {{ employee.gender }}
-      </div>
-    </div>
+      <ul>
+        <li ng-repeat="country in countries" ng-init="parentIndex=$index">
+          {{ country.name }} - Index = {{ $index }}
+          <ul>
+            <li ng-repeat="city in country.cities">
+              {{ city.name }} - Parent Index = {{ parentIndex }}, Index = {{ $index }}
+            </li>
+          </ul>
+        </li>
+      </ul>
     <app-root></app-root>
   </body>
 </html>
