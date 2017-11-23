@@ -14,7 +14,7 @@ var myApp = angular
         $scope.reverseSort = false;
 
         //? same is if statement
-        //! not the same as .reverseSort aka if it's NOT false change to true
+        //! changes value to opposite - if NOT the same as false change to true
         // : same as else change to false aka :false
         $scope.sortData = function (column) {
             $scope.reverseSort = ($scope.sortColumn == column) ? !$scope.reverseSort : false;
@@ -25,9 +25,9 @@ var myApp = angular
           if($scope.sortColumn == column) {
             return $scope.reverseSort ? 'arrow-down' : 'arrow-up'
           }
-          //only affects on column and resets others to default
+          //unselected column has no arrow
           return '';
-        }
+        };
       });
 
 //method chaining - displaying properties
