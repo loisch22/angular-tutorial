@@ -11,7 +11,7 @@ var myApp = angular
         ];
         $scope.employees = employees;
         $scope.rowLimit = 3;
-        
+        $scope.sortColumn = "name";
       });
 
 //method chaining - displaying properties
