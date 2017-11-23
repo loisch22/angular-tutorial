@@ -11,15 +11,18 @@ var myApp = angular
         ];
         $scope.employees = employees;
 
+        //item = all the properties listed in td
         $scope.search = function (item) {
           if($scope.searchText == undefined) {
             //returns all data
             return true;
           } else {
+            //indexOf looks for matching value returns -1 if no match is found
             if (item.name.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1 || item.city.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1) {
               return true;
             }
           }
+          //does not show if it doesn't match criteria
           return false;
         }
 
