@@ -2,12 +2,7 @@
 var myApp = angular
       .module("myModule", [])
       .controller("myController", function($scope) {
-        var country = {
-          name : "USA",
-          capital : "Washington, D.C.",
-          flag : "./images/usFlag.png"
-        };
-        $scope.country = country;
+        $scope.message = "Hello Angular!";
       });
 
 //method chaining - displaying properties
