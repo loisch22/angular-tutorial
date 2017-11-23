@@ -10,8 +10,23 @@ var myApp = angular
           { name: "Todd", dateOfBirth: new Date("December 05, 1983"), gender: "Male", salary: 60000 }
         ];
         $scope.employees = employees;
-        $scope.rowLimit = 3;
         $scope.sortColumn = "name";
+        $scope.reverseSort = false;
+
+        //? same is if statement
+        //! not the same as .reverseSort aka if it's NOT false change to true
+        // : same as else change to false aka :false
+        $scope.sortData = function(column) {
+            $scope.reverseSort = ($sort.sortColumn == column) ? !$scope.reverseSort : false;
+            $scope.sortColumn = column;
+        }
+        $scope.getSortClass = function (column) {
+          if($scope.sortColumn == column) {
+            return $scope.reverseSort ? 'arrow-down' : 'arrow-up'
+          }
+          //only affects on column and resets others to default
+          return '';
+        }
       });
 
 //method chaining - displaying properties
