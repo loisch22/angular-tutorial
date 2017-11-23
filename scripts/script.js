@@ -2,13 +2,34 @@
 var myApp = angular
       .module("myModule", [])
       .controller("myController", function($scope) {
-        var employees = [
-          { firstName: "Ben", lastName: "Hastings", gender: "Male", salary: 55000 },
-          { firstName: "David", lastName: "Carls", gender: "Male", salary: 90000 },
-          { firstName: "Shannon", lastName: "Sterling", gender: "Female", salary: 90000 },
-          { firstName: "Becky", lastName: "Smith", gender: "Female", salary: 65000 }
+        var countries = [
+          {
+            name: "UK",
+            cities: [
+              { name: "London" },
+              { name: "Manchester" },
+              { name: "Birmingham"}
+            ]
+          },
+          {
+            name: "USA",
+            cities: [
+              { name: "Seattle" },
+              { name: "New York" },
+              { name: "Los Angeles" }
+            ]
+          },
+          {
+            name: "South Korea",
+            cities: [
+              { name: "Seoul" },
+              { name: "Busan" },
+              { name: "Gangnam" }
+            ]
+          },
         ];
-        $scope.employees = employees;
+        //scope object
+        $scope.countries = countries;
       });
 
 //method chaining - displaying properties
