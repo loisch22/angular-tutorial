@@ -10,8 +10,8 @@ var myApp = angular
           { name: "Todd", dateOfBirth: new Date("December 05, 1983"), gender: "Male", salary: 60000 }
         ];
         $scope.employees = employees;
+    
 
 
-  
 
       });
