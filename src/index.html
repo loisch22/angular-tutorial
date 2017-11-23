@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myModule">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,33 +9,15 @@
     <link href="./styles/styles.css" rel="stylesheet">
     <title>Angular app</title>
   </head>
-  <body>
-    <div ng-controller="myController">
-      <input type="checkbox" ng-model="hideSalary"/> Hide Salary
-      <input type="checkbox" ng-model="showBirthday"> Show Birthday
-      <br><br>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th ng-show="showBirthday">Date of Birth</th>
-            <th>Gender</th>
-            <th ng-hide="hideSalary">Salary</th>
-            <th ng-show="hideSalary">Salary</th>
-            <th>City</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="employee in employees | filter:search">
-            <td>{{ employee.name | uppercase }}</td>
-            <td ng-show="showBirthday">{{ employee.dateOfBirth | date:"dd/MM/yyyy" }}</td>
-            <td>{{ employee.gender | gender }}</td>
-            <td ng-hide="hideSalary">{{ employee.salary | number:2 }}</td>
-            <td ng-show="hideSalary">#####</td>
-            <td>{{ employee.city }}</td>
-          </tr>
-        </tbody>
-      </table>
+  <body ng-app>
+    <div ng-init="employees = [
+      { name: "Ben", dateOfBirth: new Date("November 23, 1980"), gender: 1, salary: 55000.788, city: "Seattle" },
+      { name: "Susan", dateOfBirth: new Date("January 23, 1970"), gender: 2, salary: 68000, city: "San Francisco" },
+      { name: "Sara", dateOfBirth: new Date("March 10, 1984"), gender: 2, salary: 57000, city: "Seattle" },
+      { name: "Mark", dateOfBirth: new Date("August 15, 1974"), gender: 1, salary: 53000, city: "San Francisco" },
+      { name: "Todd", dateOfBirth: new Date("December 05, 1983"), gender: 3, salary: 60000, city: "San Francisco" }
+    ]">
+
     </div>
     <app-root></app-root>
   </body>
