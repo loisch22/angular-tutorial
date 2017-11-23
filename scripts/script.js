@@ -2,34 +2,20 @@
 var myApp = angular
       .module("myModule", [])
       .controller("myController", function($scope) {
-        var countries = [
-          {
-            name: "UK",
-            cities: [
-              { name: "London" },
-              { name: "Manchester" },
-              { name: "Birmingham"}
-            ]
-          },
-          {
-            name: "USA",
-            cities: [
-              { name: "Seattle" },
-              { name: "New York" },
-              { name: "Los Angeles" }
-            ]
-          },
-          {
-            name: "South Korea",
-            cities: [
-              { name: "Seoul" },
-              { name: "Busan" },
-              { name: "Gangnam" }
-            ]
-          },
+        var technologies = [
+          { name: "C#", likes: 0, dislikes: 0 },
+          { name: "ASP.NET", likes: 0, dislikes: 0 },
+          { name: "SQL Server", likes: 0, dislikes: 0 },
+          { name: "AngularJS", likes: 0, dislikes: 0 }
         ];
-        //scope object
-        $scope.countries = countries;
+        $scope.technologies = technologies;
+        //increment likes/dislikes
+        $scope.incrementLikes = function (technology) {
+          technology.likes++;
+        };
+        $scope.incrementDislikes = function (technology) {
+          technology.dislikes++;
+        };
       });
 
 //method chaining - displaying properties
