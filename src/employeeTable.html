@@ -1,0 +1,25 @@
+<input type="checkbox" ng-model="hideSalary"/> Hide Salary
+<input type="checkbox" ng-model="showBirthday"> Show Birthday
+<br><br>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th ng-show="showBirthday">Date of Birth</th>
+      <th>Gender</th>
+      <th ng-hide="hideSalary">Salary</th>
+      <th ng-show="hideSalary">Salary</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="employee in employees">
+      <td>{{ employee.name | uppercase }}</td>
+      <td ng-show="showBirthday">{{ employee.dateOfBirth | date:"dd/MM/yyyy" }}</td>
+      <td>{{ employee.gender | gender }}</td>
+      <td ng-hide="hideSalary">{{ employee.salary | number:2 }}</td>
+      <td ng-show="hideSalary">#####</td>
+      <td>{{ employee.city }}</td>
+    </tr>
+  </tbody>
+</table>
