@@ -4,20 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./scripts/angular.js"></script>
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/filters.js"></script>
     <link href="./styles/styles.css" rel="stylesheet">
     <title>Angular app</title>
   </head>
   <body ng-app>
     <div ng-init="employees = [
-      { name: "Ben", dateOfBirth: new Date("November 23, 1980"), gender: 1, salary: 55000.788, city: "Seattle" },
-      { name: "Susan", dateOfBirth: new Date("January 23, 1970"), gender: 2, salary: 68000, city: "San Francisco" },
-      { name: "Sara", dateOfBirth: new Date("March 10, 1984"), gender: 2, salary: 57000, city: "Seattle" },
-      { name: "Mark", dateOfBirth: new Date("August 15, 1974"), gender: 1, salary: 53000, city: "San Francisco" },
-      { name: "Todd", dateOfBirth: new Date("December 05, 1983"), gender: 3, salary: 60000, city: "San Francisco" }
+      { name: "Ben", gender: "Male", city: "Seattle" },
+      { name: "Susan", gender: "Female",  city: "San Francisco" },
+      { name: "Sara", gender: "Female",  city: "Seattle" },
+      { name: "Mark", gender: "Male",  city: "San Francisco" },
+      { name: "Todd", gender: "Male", city: "San Francisco" }
     ]">
 
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="employee in employees">
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.gender }}</td>
+            <td>{{ employee.city }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <app-root></app-root>
   </body>
