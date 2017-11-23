@@ -10,8 +10,12 @@ var app = angular
           { name: "Todd", dateOfBirth: new Date("December 05, 1983"), gender: 3, salary: 60000, city: "San Francisco" }
         ];
         $scope.employees = employees;
+        //ng-model="hideSalary" NOT defined so it will return false
+        //when checked ng-hide="true" since "hideSalary" == true
+        //uncheck "hideSalary" == false so ng-hide="false" == ng-hide="hideSalary"
 
-
+        //ng-show="showSalary" == false when unchecked because undefined
+        //ng-show="showSalary" == true when checked
 
 
       });
