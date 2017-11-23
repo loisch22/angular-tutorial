@@ -1,18 +1,6 @@
 //displaying images dynamically
-var myApp = angular
+var app = angular
       .module("myModule", [])
-      .filter("gender", function() {
-        return function(gender) {
-          switch(gender) {
-            case 1:
-              return "Male";
-            case 2:
-              return "Female";
-            case 3:
-              return "Not disclosed";
-          }
-        }
-      })
       .controller("myController", function($scope) {
         var employees = [
           { name: "Ben", dateOfBirth: new Date("November 23, 1980"), gender: 1, salary: 55000.788, city: "Seattle" },
