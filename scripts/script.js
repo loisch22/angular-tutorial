@@ -2,12 +2,13 @@
 var myApp = angular
       .module("myModule", [])
       .controller("myController", function($scope) {
-        var employee = {
-          firstName : "Ben",
-          lastName : "Hastings",
-          gender : "Male"
-        };
-        $scope.employee = employee;
+        var employees = [
+          { firstName: "Ben", lastName: "Hastings", gender: "Male", salary: 55000 },
+          { firstName: "David", lastName: "Carls", gender: "Male", salary: 90000 },
+          { firstName: "Shannon", lastName: "Sterling", gender: "Female", salary: 90000 },
+          { firstName: "Becky", lastName: "Smith", gender: "Female", salary: 65000 }
+        ];
+        $scope.employees = employees;
       });
 
 //method chaining - displaying properties
